@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
-
-# Define a method to match the regular expression
 def match_school(input)
-  if input =~ /School/
-    puts "Match found: #{input}"
+  match = input.match(/(School)/)
+
+  if match
+    matched_text = match[1]
+    puts "Match found: #{matched_text}"
+    puts "(#{matched_text.length} chars long)"
   else
     puts "No match found."
   end
